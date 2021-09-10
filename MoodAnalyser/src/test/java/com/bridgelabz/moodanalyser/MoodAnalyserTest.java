@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MoodAnalyserTest {
 	@Test
-	public void givenMessage_WhenSad_ShouldReturnSad() throws Exception{
+	public void givenMessage_WhenSad_ShouldReturnSad() {
 		MoodAnalyser moodAnalyzer = new MoodAnalyser("I am in sad mood");
 		String mood = null ;
 		try {
@@ -18,7 +18,7 @@ public class MoodAnalyserTest {
 	
 	
 	@Test
-	public void givenMessage_WhenNotSad_ShouldReturnHappy() throws Exception {
+	public void givenMessage_WhenNotSad_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
 		String mood = null;
 		try {
@@ -31,7 +31,7 @@ public class MoodAnalyserTest {
 	
 	
 	@Test
-	public void givenMessage_WhenPassedNull_ShouldReturnHappy() throws MoodAnalysisException{
+	public void givenMessage_WhenPassedNull_ShouldReturnHappy() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("");
 		try {
 			moodAnalyser.analyseMood();
