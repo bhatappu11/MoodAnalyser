@@ -7,7 +7,7 @@ public class MoodAnalyser {
 		this.message = message;
 	}
 	
-	public String analyseMood(String message) throws MoodAnalysisException {
+	public String analyseMood(String message) {
 		this.message = message;
 		try {
 			return analyseMood();
@@ -16,7 +16,7 @@ public class MoodAnalyser {
 		}
 	}
 	
-	public String analyseMood() throws MoodAnalysisException {
+	public String analyseMood() {
 		try {
 			if(message.length() == 0) throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Please don't send empty string");
 			if(message.contains("sad")) {
